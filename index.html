@@ -7,8 +7,13 @@
 <title>時間割から学校の授業用フォルダ作成するツール</title>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+<!-- CDNからライブラリを読み込む場合 -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script> -->
+
+<!-- ライブラリの読み込み -->
+<script src="js-library/jszip.min.js"></script>
+<script src="js-library/FileSaver.js"></script>
 <script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -22,6 +27,7 @@
     1：表に各時間の授業名を入力する(授業がない所は空白にする、Tabキーで次々と移動可能)<br>
     2：授業の回数とファイル名(◯◯年の前学期みたいな)を入力後に「フォルダ生成してDL」をクリック<br>
     3：パソコンに授業用フォルダがダウンロードされます(zip形式)<br><br>
+    注：「各曜日＞各授業＞各回」という感じのフォルダになります。<br>
     注：何にも授業がない時間、曜日の所はフォルダ生成しません(仕様です)<br>
     注：ファイル名に使用できない文字[\ / : * ? &lt; &gt;]を入力すると「ぬ」に置換します<br>
   </p>
@@ -110,7 +116,7 @@
   </table>
   <br>授業は全部で回数ある？：<input type="number" id="lessons_num" value="20">
   <br>フォルダの名前：<input type="text" id="folder_name">
-  <input type="button" onclick="Generator()" value="フォルダ生成してDLボタン">
+  <br><input type="button" onclick="Generator()" value="フォルダ生成してDLボタン">
   <br><br><br>
 
   <h2>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</h2>
